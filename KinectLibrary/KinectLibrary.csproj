@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43C99581-C0DF-47D1-94F5-F2D7F2E2B236}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KinectLibrary</RootNamespace>
+    <AssemblyName>KinectLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Kinect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorImage.cs" />
+    <Compile Include="Contour\ContourTracking.cs" />
+    <Compile Include="Contour\IContourTracking.cs" />
+    <Compile Include="CurvePoint.cs" />
+    <Compile Include="Curves\CurveDetection.cs" />
+    <Compile Include="Curves\ICurveDetection.cs" />
+    <Compile Include="Debug\DebugInfo.cs" />
+    <Compile Include="DepthImage.cs" />
+    <Compile Include="DistanceScanner.cs" />
+    <Compile Include="DistanceThreshold.cs" />
+    <Compile Include="DTWGestureRecognition\DtwGestureRecognizer.cs" />
+    <Compile Include="DTWGestureRecognition\StoredGestures.cs" />
+    <Compile Include="DTWGestureRecognition\GestureStream.cs" />
+    <Compile Include="DTWGestureRecognition\IGestureRecognition.cs" />
+    <Compile Include="Enhancements\HandEnhancements.cs" />
+    <Compile Include="Enhancements\IPrediction.cs" />
+    <Compile Include="Enhancements\Prediction.cs" />
+    <Compile Include="Enhancements\Smoothing.cs" />
+    <Compile Include="Fingers\FingerRecognition.cs" />
+    <Compile Include="Fingers\IFingerRecognition.cs" />
+    <Compile Include="Hand.cs" />
+    <Compile Include="Fingertip.cs" />
+    <Compile Include="DTWGestureRecognition\GestureRecognition.cs" />
+    <Compile Include="DTWGestureRecognition\Gesture.cs" />
+    <Compile Include="Helpers\XmlHelpers.cs" />
+    <Compile Include="Helpers\XnaHelpers.cs" />
+    <Compile Include="IKinect.cs" />
+    <Compile Include="EventHandlers.cs" />
+    <Compile Include="ImageSaver.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Kinect.cs" />
+    <Compile Include="Pixel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangeFinder.cs" />
+    <Compile Include="Vector.cs" />
+    <Compile Include="VR\GridBox.cs" />
+    <Compile Include="VR\PerspectiveCamera.cs" />
+    <Compile Include="VR\Screen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram - Modules.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

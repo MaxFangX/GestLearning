@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="KinectLibrary.Kinect" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAASAkASQgAgAAGAAAICAAAEAAJJKgCARFAAA=</HashCode>
+      <FileName>Kinect.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KinectLibrary.Contour.ContourTracking" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="16.25" Width="11" />
+    <NestedTypes>
+      <Enum Name="KinectLibrary.Contour.ContourTracking.SearchDirection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Contour\ContourTracking.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="KinectLibrary.Contour.ContourTracking.GeneralDirection" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Contour\ContourTracking.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABKAAAsIEgABRBToKiBIIAAAIAAQIoAwAkghAAERgAA=</HashCode>
+      <FileName>Contour\ContourTracking.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KinectLibrary.Curves.CurveDetection" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="31" Width="7.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAABAAAAIEIAAAAAQCAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Curves\CurveDetection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KinectLibrary.DTWGestureRecognition.GestureRecognition" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="49.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAQEBAIADAAAgAAAAIAAAAIAECAIAAAyAgSAAg=</HashCode>
+      <FileName>DTWGestureRecognition\GestureRecognition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KinectLibrary.Fingers.FingerRecognition" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="38.5" Width="7.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAABCAQAAgAgAAAAUAAAAAAABAAAAAAAAAACgA=</HashCode>
+      <FileName>Fingers\FingerRecognition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="KinectLibrary.IKinect">
+    <Position X="0.5" Y="0.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAEAAAACAAAAAAJBKgAAAAAAA=</HashCode>
+      <FileName>IKinect.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KinectLibrary.Contour.IContourTracking">
+    <Position X="0.5" Y="12.25" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAARAKAAAIAAAAAAAIIAAAAgAAAEAAAA=</HashCode>
+      <FileName>Contour\IContourTracking.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KinectLibrary.Curves.ICurveDetection">
+    <Position X="0.5" Y="27.75" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAEIAAAAAQAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Curves\ICurveDetection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KinectLibrary.DTWGestureRecognition.IGestureRecognition">
+    <Position X="0.5" Y="43.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAQEAAIACAAAAAAAAIAAAAIAECAAAAAgAgCAAA=</HashCode>
+      <FileName>DTWGestureRecognition\IGestureRecognition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KinectLibrary.DTWGestureRecognition.IGestureRecognitionDebug">
+    <Position X="0.5" Y="47.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAgAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>DTWGestureRecognition\IGestureRecognition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="KinectLibrary.Fingers.IFingerRecognition">
+    <Position X="0.5" Y="35.75" Width="7.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Fingers\IFingerRecognition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
