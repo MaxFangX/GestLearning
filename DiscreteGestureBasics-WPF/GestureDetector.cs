@@ -261,7 +261,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                 if (result != null)
                                 {
                                     // update the GestureResultView object with new gesture result values
-                                    this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);                            //    }
+                                    this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
+                                }
                             }
                             if (gesture.Name.Equals(this.byeName) && gesture.GestureType == GestureType.Discrete)
                             {
