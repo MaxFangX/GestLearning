@@ -186,18 +186,144 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             }
         }
 
-        public bool Detected
+        public bool HaltDetected
         {
             get
             {
-                return this.detected;
+                if (detectedDictionary.ContainsKey(haltName))
+                {
+                    return detectedDictionary[haltName];
+                }
+                return false;
             }
 
             private set
             {
-                if (this.detected != value)
+                if (this.detectedDictionary[haltName] != value)
                 {
-                    this.detected = value;
+                    UpdateDetectedDictionary(haltName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public bool HiDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(hiName))
+                {
+                    return detectedDictionary[hiName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[hiName] != value)
+                {
+                    UpdateDetectedDictionary(hiName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public bool WeDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(weName))
+                {
+                    return detectedDictionary[weName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[weName] != value)
+                {
+                    UpdateDetectedDictionary(weName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public bool LoveDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(loveName))
+                {
+                    return detectedDictionary[loveName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[loveName] != value)
+                {
+                    UpdateDetectedDictionary(loveName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public bool YouDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(youName))
+                {
+                    return detectedDictionary[youName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[youName] != value)
+                {
+                    UpdateDetectedDictionary(youName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public bool ByeDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(byeName))
+                {
+                    return detectedDictionary[byeName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[byeName] != value)
+                {
+                    UpdateDetectedDictionary(byeName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public bool HackSCDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(hackSCName))
+                {
+                    return detectedDictionary[hackSCName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[hackSCName] != value)
+                {
+                    UpdateDetectedDictionary(hackSCName, value);
                     this.NotifyPropertyChanged();
                 }
             }
