@@ -65,12 +65,12 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         //Hardcoded
         private readonly string haltName = "Halt";
-        //private readonly string hiName = "Hi";
-        //private readonly string weName = "We";
+        private readonly string hiName = "Hi";
+        private readonly string weName = "We";
         private readonly string loveName = "Love";
-        //private readonly string youName = "You";
-        //private readonly string byeName = "Bye";
-        //private readonly string hackSCName = "HackSC";
+        private readonly string youName = "You";
+        private readonly string byeName = "Bye";
+        private readonly string hackSCName = "HackSC";
 
         /// <summary>
         /// Initializes a new instance of the GestureResultView class and sets initial property values
