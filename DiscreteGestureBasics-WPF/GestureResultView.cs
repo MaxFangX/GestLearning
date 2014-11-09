@@ -48,6 +48,30 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <summary> True, if the body is currently being tracked </summary>
         private bool isTracked = false;
 
+        //Confidence Dictionary
+        private Dictionary<string, float> confidenceDictionary = new Dictionary<string, float>();
+
+        private void UpdateDictionary(string name, float confidence)
+        {
+            if (confidenceDictionary.HasKey(name))
+            {
+                confidenceDictionary[name] = confidence;
+            }
+            else
+            {
+                confidenceDictionary.Add(name, confidence);
+            }
+        }
+
+        //Hardcoded
+        private readonly string haltName = "Halt";
+        //private readonly string hiName = "Hi";
+        //private readonly string weName = "We";
+        private readonly string loveName = "Love";
+        //private readonly string youName = "You";
+        //private readonly string byeName = "Bye";
+        //private readonly string hackSCName = "HackSC";
+
         /// <summary>
         /// Initializes a new instance of the GestureResultView class and sets initial property values
         /// </summary>
@@ -173,14 +197,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidence;
+                return this.confidenceDictionary[haltName];
             }
 
             private set
             {
-                if (this.confidence != value)
+                if (this.confidenceDictionary[haltName] != value)
                 {
-                    this.confidence = value;
+                    this.confidenceDictionary[haltName] = value;
                     this.NotifyPropertyChanged();
                 }
             }
@@ -189,14 +213,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidence;
+                return this.confidenceDictionary[hiName];
             }
 
             private set
             {
-                if (this.confidence != value)
+                if (this.confidenceDictionary[hiName] != value)
                 {
-                    this.confidence = value;
+                    this.confidenceDictionary[hiName] = value;
                     this.NotifyPropertyChanged();
                 }
             }
@@ -205,14 +229,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidence;
+                return this.confidenceDictionary[weName];
             }
 
             private set
             {
-                if (this.confidence != value)
+                if (this.confidenceDictionary[weName] != value)
                 {
-                    this.confidence = value;
+                    this.confidenceDictionary[weName] = value;
                     this.NotifyPropertyChanged();
                 }
             }
@@ -221,14 +245,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidence;
+                return this.confidenceDictionary[loveName];
             }
 
             private set
             {
-                if (this.confidence != value)
+                if (this.confidenceDictionary[loveName] != value)
                 {
-                    this.confidence = value;
+                    this.confidenceDictionary[loveName] = value;
                     this.NotifyPropertyChanged();
                 }
             }
@@ -237,14 +261,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidence;
+                return this.confidenceDictionary[youName];
             }
 
             private set
             {
-                if (this.confidence != value)
+                if (this.confidenceDictionary[youName] != value)
                 {
-                    this.confidence = value;
+                    this.confidenceDictionary[youName] = value;
                     this.NotifyPropertyChanged();
                 }
             }
@@ -253,14 +277,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidence;
+                return this.confidenceDictionary[byeName];
             }
 
             private set
             {
-                if (this.confidence != value)
+                if (this.confidenceDictionary[byeName] != value)
                 {
-                    this.confidence = value;
+                    this.confidenceDictionary[byeName] = value;
                     this.NotifyPropertyChanged();
                 }
             }
@@ -269,14 +293,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidence;
+                return this.confidenceDictionary[hackSCName];
             }
 
             private set
             {
-                if (this.confidence != value)
+                if (this.confidenceDictionary[hackSCName] != value)
                 {
-                    this.confidence = value;
+                    this.confidenceDictionary[hackSCName] = value;
                     this.NotifyPropertyChanged();
                 }
             }
@@ -324,10 +348,10 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             {
                 this.Detected = isGestureDetected;
                 this.BodyColor = this.trackedColors[this.BodyIndex];
+                UpdateDictionary(gestureName, detectionConfidence);
 
                 if (this.Detected)
                 {
-                    this.Confidence = detectionConfidence;
                     this.ImageSource = this.seatedImage;
                 }
                 else
