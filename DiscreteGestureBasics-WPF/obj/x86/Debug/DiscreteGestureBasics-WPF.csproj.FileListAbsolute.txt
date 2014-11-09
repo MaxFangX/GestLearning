@@ -4,7 +4,6 @@ C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-
 C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Debug\DiscreteGestureBasics-WPF.pdb
 C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Debug\Microsoft.Kinect.VisualGestureBuilder.dll
 C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Debug\Microsoft.Kinect.VisualGestureBuilder.xml
-C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Debug\DiscreteGestureBasics-WPF.csprojResolveAssemblyReference.cache
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Debug\MainWindow.g.cs
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Debug\App.g.cs
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Debug\DiscreteGestureBasics-WPF_Content.g.cs

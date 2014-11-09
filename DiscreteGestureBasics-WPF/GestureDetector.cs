@@ -18,10 +18,13 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     public class GestureDetector : IDisposable
     {
         /// <summary> Path to the gesture database that was trained with VGB </summary>
-        private readonly string gestureDatabase = @"Database\Seated.gbd";
+        //private readonly string gestureDatabase = @"Database\Seated.gbd";
+        private readonly string gestureDatabase = @"Database\Halt.gbd";
+        
 
         /// <summary> Name of the discrete gesture in the database that we want to track </summary>
-        private readonly string seatedGestureName = "Seated";
+        //private readonly string seatedGestureName = "Seated";
+        private readonly string seatedGestureName = "Love";
 
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
         private VisualGestureBuilderFrameSource vgbFrameSource = null;
@@ -67,6 +70,10 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 // but for this program, we only want to track one discrete gesture from the database, so we'll load it by name
                 foreach (Gesture gesture in database.AvailableGestures)
                 {
+                    //if (gesture.Name.Equals(this.seatedGestureName))
+                    //{
+                    //    this.vgbFrameSource.AddGesture(gesture);
+                    //}
                     if (gesture.Name.Equals(this.seatedGestureName))
                     {
                         this.vgbFrameSource.AddGesture(gesture);

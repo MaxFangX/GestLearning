@@ -113,6 +113,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
                 this.contentGrid.Children.Add(contentControl);
             }
+            //Grid.SetColumn(something , 0);
+            //Grid.SetRow(something ,0)
         }
 
         /// <summary>
