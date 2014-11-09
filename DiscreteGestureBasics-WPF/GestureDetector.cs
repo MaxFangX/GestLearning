@@ -406,7 +406,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         private void Source_TrackingIdLost(object sender, TrackingIdLostEventArgs e)
         {
             // update the GestureResultView object to show the 'Not Tracked' image in the UI
-            this.GestureResultView.UpdateGestureResult(false, false, 0.0f);
+            this.GestureResultView.UpdateGestureResult(false, "fuck this project", false, 0.0f);
         }
     }
 }
