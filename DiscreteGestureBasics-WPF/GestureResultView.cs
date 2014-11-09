@@ -556,7 +556,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 UpdateDictionary(gestureName, detectionConfidence);
 
                 Random random = new Random();
-                int randomNumber = random.Next(0, 100);
+                int randomNumber = random.Next(60, 100);
                 this.output = "Grade: " + randomNumber + "\n";
                 foreach (string entry in detectedDictionary.Keys)
                 {
