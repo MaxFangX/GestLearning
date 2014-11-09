@@ -169,6 +169,120 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             }
         }
 
+        public float HaltConfidence
+        {
+            get
+            {
+                return this.confidence;
+            }
+
+            private set
+            {
+                if (this.confidence != value)
+                {
+                    this.confidence = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public float HiConfidence
+        {
+            get
+            {
+                return this.confidence;
+            }
+
+            private set
+            {
+                if (this.confidence != value)
+                {
+                    this.confidence = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public float WeConfidence
+        {
+            get
+            {
+                return this.confidence;
+            }
+
+            private set
+            {
+                if (this.confidence != value)
+                {
+                    this.confidence = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public float LoveConfidence
+        {
+            get
+            {
+                return this.confidence;
+            }
+
+            private set
+            {
+                if (this.confidence != value)
+                {
+                    this.confidence = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public float YouConfidence
+        {
+            get
+            {
+                return this.confidence;
+            }
+
+            private set
+            {
+                if (this.confidence != value)
+                {
+                    this.confidence = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public float ByeConfidence
+        {
+            get
+            {
+                return this.confidence;
+            }
+
+            private set
+            {
+                if (this.confidence != value)
+                {
+                    this.confidence = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public float HackSCConfidence
+        {
+            get
+            {
+                return this.confidence;
+            }
+
+            private set
+            {
+                if (this.confidence != value)
+                {
+                    this.confidence = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
+
         /// <summary> 
         /// Gets an image for display in the UI which represents the current gesture result for the associated body 
         /// </summary>
