@@ -221,28 +221,27 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
                                 }
                             }
-                            //if (gesture.Name.Equals(this.hiName) && gesture.GestureType == GestureType.Discrete)
-                            //{
-                            //    DiscreteGestureResult result = null;
-                            //    discreteResults.TryGetValue(gesture, out result);
+                            if (gesture.Name.Equals(this.hiName) && gesture.GestureType == GestureType.Discrete)
+                            {
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
+                                }
+                            }
+                            if (gesture.Name.Equals(this.weName) && gesture.GestureType == GestureType.Discrete)
+                            {
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
 
-                            //    if (result != null)
-                            //    {
-                            //        // update the GestureResultView object with new gesture result values
-                            //        this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
-                            //    }
-                            //}
-                            //if (gesture.Name.Equals(this.weName) && gesture.GestureType == GestureType.Discrete)
-                            //{
-                            //    DiscreteGestureResult result = null;
-                            //    discreteResults.TryGetValue(gesture, out result);
-
-                            //    if (result != null)
-                            //    {
-                            //        // update the GestureResultView object with new gesture result values
-                            //        this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
-                            //    }
-                            //}
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
+                                }
+                            }
                             if (gesture.Name.Equals(this.loveName) && gesture.GestureType == GestureType.Discrete)
                             {
                                 DiscreteGestureResult result = null;
@@ -254,38 +253,38 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
                                 }
                             }
-                            //if (gesture.Name.Equals(this.youName) && gesture.GestureType == GestureType.Discrete)
-                            //{
-                            //    DiscreteGestureResult result = null;
-                            //    discreteResults.TryGetValue(gesture, out result);
+                            if (gesture.Name.Equals(this.youName) && gesture.GestureType == GestureType.Discrete)
+                            {
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
 
-                            //    if (result != null)
-                            //    {
-                            //        // update the GestureResultView object with new gesture result values
-                            //        this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);                            //    }
-                            //}
-                            //if (gesture.Name.Equals(this.byeName) && gesture.GestureType == GestureType.Discrete)
-                            //{
-                            //    DiscreteGestureResult result = null;
-                            //    discreteResults.TryGetValue(gesture, out result);
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);                            //    }
+                            }
+                            if (gesture.Name.Equals(this.byeName) && gesture.GestureType == GestureType.Discrete)
+                            {
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
 
-                            //    if (result != null)
-                            //    {
-                            //        // update the GestureResultView object with new gesture result values
-                            //        this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
-                            //    }
-                            //}
-                            //if (gesture.Name.Equals(this.hackSCName) && gesture.GestureType == GestureType.Discrete)
-                            //{
-                            //    DiscreteGestureResult result = null;
-                            //    discreteResults.TryGetValue(gesture, out result);
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
+                                }
+                            }
+                            if (gesture.Name.Equals(this.hackSCName) && gesture.GestureType == GestureType.Discrete)
+                            {
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
 
-                            //    if (result != null)
-                            //    {
-                            //        // update the GestureResultView object with new gesture result values
-                            //        this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
-                            //    }
-                            //}
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, gesture.Name, result.Detected, result.Confidence);
+                                }
+                            }
                             
 
 
