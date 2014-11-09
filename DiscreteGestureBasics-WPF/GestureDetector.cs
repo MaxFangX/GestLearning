@@ -19,11 +19,12 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     {
         /// <summary> Path to the gesture database that was trained with VGB </summary>
         //private readonly string gestureDatabase = @"Database\Seated.gbd";
-        private readonly string gestureDatabase = @"Database\Halt.gbd";
+        private readonly string gestureDatabase = @"C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\Database\Halt.gbd";
         
 
         /// <summary> Name of the discrete gesture in the database that we want to track </summary>
         //private readonly string seatedGestureName = "Seated";
+        //vprivate readonly string seatedGestureName = "Halt";
         private readonly string seatedGestureName = "Love";
 
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>

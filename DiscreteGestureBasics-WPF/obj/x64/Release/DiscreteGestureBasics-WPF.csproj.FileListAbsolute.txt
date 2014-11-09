@@ -16,3 +16,4 @@ C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x64\Release\DiscreteGestureBasics-WPF.csproj.GenerateResource.Cache
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x64\Release\DiscreteGestureBasics-WPF.exe
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x64\Release\DiscreteGestureBasics-WPF.pdb
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x64\Release\DiscreteGestureBasics-WPF.csprojResolveAssemblyReference.cache
