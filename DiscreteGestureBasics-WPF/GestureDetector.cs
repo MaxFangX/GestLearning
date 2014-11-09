@@ -26,14 +26,14 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         //private readonly string seatedGestureName = "Seated";
         //private readonly string seatedGestureName = "Halt";
         //private readonly string seatedGestureName = "Seated";
-        private readonly string haltName = "Halt";
 
+        private readonly string haltName = "Halt";
         //private readonly string hiName = "Hi";
-        //private readonly string byeName = "We";
+        //private readonly string weName = "We";
         private readonly string loveName = "Love";
         //private readonly string youName = "You";
         //private readonly string byeName = "Bye";
-        //private readonly string byeName = "HackSC";
+        //private readonly string hackSCName = "HackSC";
 
 
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
@@ -213,7 +213,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                         // we only have one gesture in this source object, but you can get multiple gestures
                         foreach (Gesture gesture in this.vgbFrameSource.Gestures)
                         {
-                            if (gesture.Name.Equals(this.seatedGestureName) && gesture.GestureType == GestureType.Discrete)
+                            if (gesture.Name.Equals(this.haltName) && gesture.GestureType == GestureType.Discrete)
                             {
                                 DiscreteGestureResult result = null;
                                 discreteResults.TryGetValue(gesture, out result);
@@ -224,11 +224,82 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                     this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
                                 }
                             }
+                            //if (gesture.Name.Equals(this.hiName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            //if (gesture.Name.Equals(this.weName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            if (gesture.Name.Equals(this.loveName) && gesture.GestureType == GestureType.Discrete)
+                            {
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+
+                                if (result != null)
+                                {
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                                }
+                            }
+                            //if (gesture.Name.Equals(this.youName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            //if (gesture.Name.Equals(this.byeName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            //if (gesture.Name.Equals(this.hackSCName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            
+
+
                         }
                     }
                 }
             }
         }
+
+        
 
         /// <summary>
         /// Handles the TrackingIdLost event for the VisualGestureBuilderSource object
