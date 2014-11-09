@@ -42,6 +42,18 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         /// <summary> True, if the discrete gesture is currently being detected </summary>
         private bool detected = false;
+        private Dictionary<string, bool> detectedDictionary = new Dictionary<string, bool>();
+        private void UpdateDetectedDictionary(string name, bool detected)
+        {
+            if (detectedDictionary.ContainsKey(name))
+            {
+                detectedDictionary[name] = detected;
+            }
+            else
+            {
+                detectedDictionary.Add(name, detected);
+            }
+        }
 
         /// <summary> Image to display in UI which corresponds to tracking/detection state </summary>
         private ImageSource imageSource = null;
@@ -173,6 +185,25 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 }
             }
         }
+
+        public bool Detected
+        {
+            get
+            {
+                return this.detected;
+            }
+
+            private set
+            {
+                if (this.detected != value)
+                {
+                    this.detected = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
+
 
         /// <summary> 
         /// Gets a float value which indicates the detector's confidence that the gesture is occurring for the associated body 
