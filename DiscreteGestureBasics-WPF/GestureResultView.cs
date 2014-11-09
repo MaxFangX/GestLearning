@@ -198,7 +198,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidenceDictionary[haltName];
+                if (this.confidenceDictionary.ContainsKey(haltName))
+                {
+                    return this.confidenceDictionary[haltName];
+                }
+                return 0.0f;
             }
 
             private set
@@ -214,7 +218,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidenceDictionary[hiName];
+                if (this.confidenceDictionary.ContainsKey(hiName))
+                {
+                    return this.confidenceDictionary[hiName];
+                }
+                return 0.0f;
             }
 
             private set
@@ -230,7 +238,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidenceDictionary[weName];
+                if (this.confidenceDictionary.ContainsKey(weName))
+                {
+                    return this.confidenceDictionary[weName];
+                }
+                return 0.0f;
             }
 
             private set
@@ -246,7 +258,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidenceDictionary[loveName];
+                if (this.confidenceDictionary.ContainsKey(loveName))
+                {
+                    return this.confidenceDictionary[loveName];
+                }
+                return 0.0f;
             }
 
             private set
@@ -262,7 +278,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidenceDictionary[youName];
+                if (this.confidenceDictionary.ContainsKey(youName))
+                {
+                    return this.confidenceDictionary[youName];
+                }
+                return 0.0f;
             }
 
             private set
@@ -278,7 +298,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidenceDictionary[byeName];
+                if (this.confidenceDictionary.ContainsKey(byeName))
+                {
+                    return this.confidenceDictionary[byeName];
+                }
+                return 0.0f;
             }
 
             private set
@@ -294,7 +318,11 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         {
             get
             {
-                return this.confidenceDictionary[hackSCName];
+                if (this.confidenceDictionary.ContainsKey(hackSCName))
+                {
+                    return this.confidenceDictionary[hackSCName];
+                }
+                return 0.0f;
             }
 
             private set

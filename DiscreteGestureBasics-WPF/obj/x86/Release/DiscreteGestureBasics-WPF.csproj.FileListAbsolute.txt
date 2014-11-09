@@ -6,3 +6,14 @@ C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF_MarkupCompile.cache
 C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF_MarkupCompile.lref
+C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Release\Database\Seated.gbd
+C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Release\DiscreteGestureBasics-WPF.exe
+C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Release\DiscreteGestureBasics-WPF.pdb
+C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Release\Microsoft.Kinect.VisualGestureBuilder.dll
+C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Release\Microsoft.Kinect.VisualGestureBuilder.xml
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\MainWindow.baml
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF.g.resources
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\Microsoft.Samples.Kinect.DiscreteGestureBasics.Properties.Resources.resources
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF.csproj.GenerateResource.Cache
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF.exe
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF.pdb
