@@ -299,6 +299,114 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             }
         }
 
+        public Dictionary<string, float> getConfidenceDictionary(object sender, VisualGestureBuilderFrameArrivedEventArgs e)
+        {
+            Dictionary<string, float> confidenceDictionary = new Dictionary<string, float>();
+            VisualGestureBuilderFrameReference frameReference = e.FrameReference;
+            using (VisualGestureBuilderFrame frame = frameReference.AcquireFrame())
+            {
+                if (frame != null)
+                {
+                    // get the discrete gesture results which arrived with the latest frame
+                    IReadOnlyDictionary<Gesture, DiscreteGestureResult> discreteResults = frame.DiscreteGestureResults;
+
+                    if (discreteResults != null)
+                    {
+                        // we only have one gesture in this source object, but you can get multiple gestures
+                        foreach (Gesture gesture in this.vgbFrameSource.Gestures)
+                        {
+                            if (gesture.Name.Equals(this.haltName) && gesture.GestureType == GestureType.Discrete)
+                            {
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+
+                                if (result != null)
+                                {
+                                    confidenceDictionary.Add(gesture.Name, result.Confidence);
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                                }
+                            }
+                            //if (gesture.Name.Equals(this.hiName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        confidenceDictionary.Add(gesture.Name, result.Confidence);
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            //if (gesture.Name.Equals(this.weName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        confidenceDictionary.Add(gesture.Name, result.Confidence);
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            if (gesture.Name.Equals(this.loveName) && gesture.GestureType == GestureType.Discrete)
+                            {
+                                DiscreteGestureResult result = null;
+                                discreteResults.TryGetValue(gesture, out result);
+
+                                if (result != null)
+                                {
+                                    confidenceDictionary.Add(gesture.Name, result.Confidence);
+                                    // update the GestureResultView object with new gesture result values
+                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                                }
+                            }
+                            //if (gesture.Name.Equals(this.youName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        confidenceDictionary.Add(gesture.Name, result.Confidence);
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            //if (gesture.Name.Equals(this.byeName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        confidenceDictionary.Add(gesture.Name, result.Confidence);
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+                            //if (gesture.Name.Equals(this.hackSCName) && gesture.GestureType == GestureType.Discrete)
+                            //{
+                            //    DiscreteGestureResult result = null;
+                            //    discreteResults.TryGetValue(gesture, out result);
+
+                            //    if (result != null)
+                            //    {
+                            //        confidenceDictionary.Add(gesture.Name, result.Confidence);
+                            //        // update the GestureResultView object with new gesture result values
+                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
+                            //    }
+                            //}
+
+                        }
+                    }
+                }
+            }
+
+            return confidenceDictionary;
+        } 
         
 
         /// <summary>
