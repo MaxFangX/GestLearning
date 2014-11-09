@@ -526,24 +526,25 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
             if (!this.IsTracked)
             {
-                this.ImageSource = this.notTrackedImage;
+                //this.ImageSource = this.notTrackedImage;
                 this.Detected = false;
                 this.BodyColor = Brushes.Gray;
             }
             else
             {
                 this.Detected = isGestureDetected;
+                UpdateDetectedDictionary(gestureName, isGestureDetected);
                 this.BodyColor = this.trackedColors[this.BodyIndex];
                 UpdateDictionary(gestureName, detectionConfidence);
 
-                if (this.Detected)
-                {
-                    this.ImageSource = this.seatedImage;
-                }
-                else
-                {
-                    this.ImageSource = this.notSeatedImage;
-                }
+                //if (this.Detected)
+                //{
+                //    this.ImageSource = this.seatedImage;
+                //}
+                //else
+                //{
+                //    this.ImageSource = this.notSeatedImage;
+                //}
             }
         }
 

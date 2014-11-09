@@ -86,6 +86,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             int col0Row = 0;
             int col1Row = 0;
             int maxBodies = this.kinectSensor.BodyFrameSource.BodyCount;
+            
+
             for (int i = 0; i < maxBodies; ++i)
             {
                 GestureResultView result = new GestureResultView(i, false, false, 0.0f);
