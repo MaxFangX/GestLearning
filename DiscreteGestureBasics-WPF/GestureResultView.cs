@@ -40,8 +40,22 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <summary> Current confidence value reported by the discrete gesture </summary>
         private float confidence = 0.0f;
 
+        private string output = "";
+
         /// <summary> True, if the discrete gesture is currently being detected </summary>
         private bool detected = false;
+        private Dictionary<string, bool> detectedDictionary = new Dictionary<string, bool>();
+        private void UpdateDetectedDictionary(string name, bool detected)
+        {
+            if (detectedDictionary.ContainsKey(name))
+            {
+                detectedDictionary[name] = detected;
+            }
+            else
+            {
+                detectedDictionary.Add(name, detected);
+            }
+        }
 
         /// <summary> Image to display in UI which corresponds to tracking/detection state </summary>
         private ImageSource imageSource = null;
@@ -154,6 +168,22 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
             }
         }
 
+        public string Output
+        {
+            get
+            {
+                return this.output;
+            }
+            private set
+            {
+                if (this.output != value)
+                {
+                    this.output = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
         /// <summary> 
         /// Gets a value indicating whether or not the discrete gesture has been detected
         /// </summary>
@@ -173,6 +203,151 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 }
             }
         }
+
+        public bool HaltDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(haltName))
+                {
+                    return detectedDictionary[haltName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[haltName] != value)
+                {
+                    UpdateDetectedDictionary(haltName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public bool HiDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(hiName))
+                {
+                    return detectedDictionary[hiName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[hiName] != value)
+                {
+                    UpdateDetectedDictionary(hiName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public bool WeDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(weName))
+                {
+                    return detectedDictionary[weName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[weName] != value)
+                {
+                    UpdateDetectedDictionary(weName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public bool LoveDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(loveName))
+                {
+                    return detectedDictionary[loveName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[loveName] != value)
+                {
+                    UpdateDetectedDictionary(loveName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public bool YouDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(youName))
+                {
+                    return detectedDictionary[youName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[youName] != value)
+                {
+                    UpdateDetectedDictionary(youName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public bool ByeDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(byeName))
+                {
+                    return detectedDictionary[byeName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[byeName] != value)
+                {
+                    UpdateDetectedDictionary(byeName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+        public bool HackSCDetected
+        {
+            get
+            {
+                if (detectedDictionary.ContainsKey(hackSCName))
+                {
+                    return detectedDictionary[hackSCName];
+                }
+                return false;
+            }
+
+            private set
+            {
+                if (this.detectedDictionary[hackSCName] != value)
+                {
+                    UpdateDetectedDictionary(hackSCName, value);
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
+
 
         /// <summary> 
         /// Gets a float value which indicates the detector's confidence that the gesture is occurring for the associated body 
@@ -369,24 +544,36 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
             if (!this.IsTracked)
             {
-                this.ImageSource = this.notTrackedImage;
+                //this.ImageSource = this.notTrackedImage;
                 this.Detected = false;
                 this.BodyColor = Brushes.Gray;
             }
             else
             {
                 this.Detected = isGestureDetected;
+                UpdateDetectedDictionary(gestureName, isGestureDetected);
                 this.BodyColor = this.trackedColors[this.BodyIndex];
                 UpdateDictionary(gestureName, detectionConfidence);
 
-                if (this.Detected)
+                Random random = new Random();
+                int randomNumber = random.Next(75, 95);
+                this.output = "Grade: " + randomNumber + "\n";
+                foreach (string entry in detectedDictionary.Keys)
                 {
-                    this.ImageSource = this.seatedImage;
+                    if (this.detectedDictionary[entry] == true)
+                    {
+                        this.output += gestureName + "\n";
+                    }
                 }
-                else
-                {
-                    this.ImageSource = this.notSeatedImage;
-                }
+
+                //if (this.Detected)
+                //{
+                //    this.ImageSource = this.seatedImage;
+                //}
+                //else
+                //{
+                //    this.ImageSource = this.notSeatedImage;
+                //}
             }
         }
 

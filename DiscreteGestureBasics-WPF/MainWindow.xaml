@@ -35,7 +35,7 @@
         </Grid.RowDefinitions>
 
         <Image Grid.Row="0" Source="Images\Logo.png" HorizontalAlignment="Left" Stretch="Fill" Height="32" Width="81" Margin="0 10 0 5" />
-        <TextBlock Grid.Row="0" Margin="0 0 -1 0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="{StaticResource MediumGreyBrush}" FontFamily="Segoe UI" FontSize="18">Discrete Gesture Basics</TextBlock>
+        <TextBlock Grid.Row="0" Margin="0 0 -1 0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="{StaticResource MediumGreyBrush}" FontFamily="Segoe UI" FontSize="18">Gest Learning</TextBlock>
         <Image Grid.Row="0" Source="Images\Status.png" Stretch="None" HorizontalAlignment="Center" Margin="0 0 0 5" />
 
         <Grid x:Name="contentGrid" Grid.Row="1" >
@@ -55,7 +55,7 @@
                     <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
                 </Viewbox>
                 <TextBlock Text="This program can track up to 6 people simultaneously. Stand in front of the sensor to get tracked. Sit down to trigger the 'Seated' gesture." TextWrapping="Wrap" Margin="5 10 5 5" Foreground="{StaticResource MediumGreyBrush}" FontFamily="Segoe UI" FontSize="14"/>
-                <TextBlock Text="This is a test output" FontFamily="Segoi" FontSize="30"></TextBlock>
+                <TextBlock Text="{Binding Output, StringFormat='Seated: {0}'}" FontFamily="Segoi" FontSize="30"></TextBlock>
             </StackPanel>
         </Grid>
         
