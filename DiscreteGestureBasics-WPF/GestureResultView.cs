@@ -40,6 +40,8 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <summary> Current confidence value reported by the discrete gesture </summary>
         private float confidence = 0.0f;
 
+        private string output = "";
+
         /// <summary> True, if the discrete gesture is currently being detected </summary>
         private bool detected = false;
         private Dictionary<string, bool> detectedDictionary = new Dictionary<string, bool>();
@@ -161,6 +163,22 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 if (this.IsTracked != value)
                 {
                     this.isTracked = value;
+                    this.NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public string Output
+        {
+            get
+            {
+                return this.output;
+            }
+            private set
+            {
+                if (this.output != value)
+                {
+                    this.output = value;
                     this.NotifyPropertyChanged();
                 }
             }
@@ -536,6 +554,15 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 UpdateDetectedDictionary(gestureName, isGestureDetected);
                 this.BodyColor = this.trackedColors[this.BodyIndex];
                 UpdateDictionary(gestureName, detectionConfidence);
+
+                this.output = "";
+                foreach (string entry in detectedDictionary.Keys)
+                {
+                    if (this.detectedDictionary[entry] == true)
+                    {
+                        this.output += gestureName + "\n";
+                    }
+                }
 
                 //if (this.Detected)
                 //{

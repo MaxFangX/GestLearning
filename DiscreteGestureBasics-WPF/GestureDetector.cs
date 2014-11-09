@@ -28,12 +28,12 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         //private readonly string seatedGestureName = "Seated";
 
         private readonly string haltName = "Halt";
-        //private readonly string hiName = "Hi";
-        //private readonly string weName = "We";
+        private readonly string hiName = "Hi";
+        private readonly string weName = "We";
         private readonly string loveName = "Love";
-        //private readonly string youName = "You";
-        //private readonly string byeName = "Bye";
-        //private readonly string hackSCName = "HackSC";
+        private readonly string youName = "You";
+        private readonly string byeName = "Bye";
+        private readonly string hackSCName = "HackSC";
 
 
         /// <summary> Gesture frame source which should be tied to a body tracking ID </summary>
@@ -80,39 +80,36 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 // but for this program, we only want to track one discrete gesture from the database, so we'll load it by name
                 foreach (Gesture gesture in database.AvailableGestures)
                 {
-                    //if (gesture.Name.Equals(this.seatedGestureName))
-                    //{
-                    //    this.vgbFrameSource.AddGesture(gesture);
-                    //}
+                    
 
                     //Halt
                     if (gesture.Name.Equals(this.haltName)){
                         this.vgbFrameSource.AddGesture(gesture);
                     }
                     ////Hi
-                    //else if (gesture.Name.Equals(this.hiName)){
-                    //    this.vgbFrameSource.AddGesture(gesture);
-                    //}
-                    ////We
-                    //else if (gesture.Name.Equals(this.weName)){
-                    //    this.vgbFrameSource.AddGesture(gesture);
-                    //}
+                    else if (gesture.Name.Equals(this.hiName)){
+                        this.vgbFrameSource.AddGesture(gesture);
+                    }
+                    //We
+                    else if (gesture.Name.Equals(this.weName)){
+                        this.vgbFrameSource.AddGesture(gesture);
+                    }
                     //Love
                     else if (gesture.Name.Equals(this.loveName)){
                         this.vgbFrameSource.AddGesture(gesture);
                     }
                     //You
-                    //else if (gesture.Name.Equals(this.youName)){
-                    //    this.vgbFrameSource.AddGesture(gesture);
-                    //}
-                    ////Bye
-                    //else if (gesture.Name.Equals(this.byeName)){
-                    //    this.vgbFrameSource.AddGesture(gesture);
-                    //}
-                    ////HackSC
-                    //else if (gesture.Name.Equals(this.hackSCName)){
-                    //    this.vgbFrameSource.AddGesture(gesture);
-                    //}
+                    else if (gesture.Name.Equals(this.youName)){
+                        this.vgbFrameSource.AddGesture(gesture);
+                    }
+                    //Bye
+                    else if (gesture.Name.Equals(this.byeName)){
+                        this.vgbFrameSource.AddGesture(gesture);
+                    }
+                    //HackSC
+                    else if (gesture.Name.Equals(this.hackSCName)){
+                        this.vgbFrameSource.AddGesture(gesture);
+                    }
                 }
             }
         }
