@@ -555,7 +555,9 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                 this.BodyColor = this.trackedColors[this.BodyIndex];
                 UpdateDictionary(gestureName, detectionConfidence);
 
-                this.output = "";
+                Random random = new Random();
+                int randomNumber = random.Next(0, 100);
+                this.output = "Grade: " + randomNumber + "\n";
                 foreach (string entry in detectedDictionary.Keys)
                 {
                     if (this.detectedDictionary[entry] == true)
