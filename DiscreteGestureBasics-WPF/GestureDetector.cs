@@ -323,8 +323,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                 if (result != null)
                                 {
                                     confidenceDictionary.Add(gesture.Name, result.Confidence);
-                                    // update the GestureResultView object with new gesture result values
-                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
                                 }
                             }
                             //if (gesture.Name.Equals(this.hiName) && gesture.GestureType == GestureType.Discrete)
@@ -359,8 +357,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                                 if (result != null)
                                 {
                                     confidenceDictionary.Add(gesture.Name, result.Confidence);
-                                    // update the GestureResultView object with new gesture result values
-                                    this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
                                 }
                             }
                             //if (gesture.Name.Equals(this.youName) && gesture.GestureType == GestureType.Discrete)
@@ -371,8 +367,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                             //    if (result != null)
                             //    {
                             //        confidenceDictionary.Add(gesture.Name, result.Confidence);
-                            //        // update the GestureResultView object with new gesture result values
-                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
                             //    }
                             //}
                             //if (gesture.Name.Equals(this.byeName) && gesture.GestureType == GestureType.Discrete)
@@ -383,8 +377,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                             //    if (result != null)
                             //    {
                             //        confidenceDictionary.Add(gesture.Name, result.Confidence);
-                            //        // update the GestureResultView object with new gesture result values
-                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
                             //    }
                             //}
                             //if (gesture.Name.Equals(this.hackSCName) && gesture.GestureType == GestureType.Discrete)
@@ -395,8 +387,6 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
                             //    if (result != null)
                             //    {
                             //        confidenceDictionary.Add(gesture.Name, result.Confidence);
-                            //        // update the GestureResultView object with new gesture result values
-                            //        this.GestureResultView.UpdateGestureResult(true, result.Detected, result.Confidence);
                             //    }
                             //}
 
