@@ -1,1 +1,8 @@
 C:\Users\MaXxX\Google Drive\Programming\~Github\Fingerput\DiscreteGestureBasics-WPF\bin\x86\Release\DiscreteGestureBasics-WPF.exe.config
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF.csprojResolveAssemblyReference.cache
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\MainWindow.g.cs
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\App.g.cs
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF_Content.g.cs
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF_MarkupCompile.cache
+C:\Users\MaXxX\Google Drive\Programming\~Github\fingerput\DiscreteGestureBasics-WPF\obj\x86\Release\DiscreteGestureBasics-WPF_MarkupCompile.lref

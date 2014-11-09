@@ -11,6 +11,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     using System.Runtime.CompilerServices;
     using System.Windows.Media;
     using System.Windows.Media.Imaging;
+    using System.Collections.Generic;
 
     /// <summary>
     /// Stores discrete gesture results for the GestureDetector.
@@ -53,7 +54,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
 
         private void UpdateDictionary(string name, float confidence)
         {
-            if (confidenceDictionary.HasKey(name))
+            if (confidenceDictionary.ContainsKey(name))
             {
                 confidenceDictionary[name] = confidence;
             }
