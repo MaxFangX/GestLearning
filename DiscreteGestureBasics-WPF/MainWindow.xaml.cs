@@ -21,6 +21,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
     using System.Windows.Controls;
     using Microsoft.Kinect;
     using Microsoft.Kinect.VisualGestureBuilder;
+    
 
     /// <summary>
     /// Interaction logic for the MainWindow
