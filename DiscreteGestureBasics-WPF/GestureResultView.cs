@@ -40,7 +40,7 @@ namespace Microsoft.Samples.Kinect.DiscreteGestureBasics
         /// <summary> Current confidence value reported by the discrete gesture </summary>
         private float confidence = 0.0f;
 
-        private string output = "";
+        private string output = "unchanged value";
 
         /// <summary> True, if the discrete gesture is currently being detected </summary>
         private bool detected = false;

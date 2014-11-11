@@ -20,8 +20,9 @@
                 </Grid.RowDefinitions>
                 <TextBlock HorizontalAlignment="Stretch" Text="{Binding BodyIndex, StringFormat='Body Index: {0}'}" FontSize="14" FontFamily="Segoe UI" FontWeight="SemiBold" Margin="5"/>
                 <Image Source="{Binding ImageSource}" Stretch="Uniform" Grid.Row="1" Margin="5"/>
-                <TextBlock Text="{Binding Detected, StringFormat='Seated: {0}'}" FontSize="18" FontFamily="Segoe UI" FontWeight="SemiBold" Grid.Row="2" Margin="5 5 0 0"/>
-                <TextBlock Text="{Binding Confidence, StringFormat='Confidence: {0}'}" FontSize="18" FontFamily="Segoe UI" FontWeight="SemiBold" Grid.Row="3" Margin="5 0 0 0"/>
+                <!--<TextBlock Text="{Binding LoveDetected, StringFormat='Seated: {0}'}" FontSize="18" FontFamily="Segoe UI" FontWeight="SemiBold" Grid.Row="2" Margin="5 5 0 0"/>-->
+                <TextBlock Text="{Binding LoveConfidence, StringFormat='Confidence: {0}'}" FontSize="18" FontFamily="Segoe UI" FontWeight="SemiBold" Grid.Row="3" Margin="5 0 0 0"/>
+                <TextBlock Text="{Binding Output, StringFormat='Gesture: {0}'}" FontSize="18" FontFamily="Segoe UI" FontWeight="SemiBold" Grid.Row="2" Margin="5 5 0 0"/>
             </Grid>
         </DataTemplate>
         
